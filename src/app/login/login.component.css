@@ -1,0 +1,73 @@
+h3{
+    color: rgb(155, 193, 155)
+}
+*{
+    font-family: var(--font-family-rebrand);
+}
+
+.navbar-expand-lg{
+    position: fixed;
+}
+.logo{
+    width:5rem;
+}
+#basic-addon1{
+    background-color: white;
+    
+}
+#bt{
+    background-color: #14a800;
+    color: white;
+    border-radius:25px;
+}
+.btn-separator {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid green;
+    line-height: .1em;
+    font-weight: 300;
+}
+.mb-30, .my-30 {
+    margin-bottom: 30px!important;
+}
+.mt-30, .my-30 {
+    margin-top: 30px!important;
+}
+.btn-separator span {
+    padding: 0 10px;
+    background: #fff;
+    color:#926239;
+    font-weight: bold;
+}
+
+#sign{
+    margin-top: 50px;
+}
+
+.btn{
+    color: white;
+    border: 1px solid green;
+    background-color:green ;
+    
+}
+.btn:hover{
+    color: white;
+    background-color: rgb(155, 193, 155);
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:black;
+    opacity: 1; /* Firefox */
+  }
+ input {
+    outline-color:  rgb(155, 193, 155);
+    border: 1px solid green;
+    color: black;
+    direction: rtl;
+    text-align: right;
+    width: 100%;
+    
+  }
+  .i{
+    width: 100%;
+    margin: auto;
+  }
