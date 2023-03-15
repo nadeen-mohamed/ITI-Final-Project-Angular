@@ -1,43 +1,21 @@
 <h1>🥗 الأكلات</h1>
 <div class="container">
     <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6 mb-3" style="max-width: 400px; max-height: 500px;">
+
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-3" *ngFor="let food of myfoods " style="max-width: 400px; max-height: 500px;">
             <div class="card" >
-                <img class="card-img-top" src="../../assets/makrony&kofta.jpg" alt="Card image cap">
+                <img class="card-img-top" src={{food.foodImg}} alt="Card image cap">
                 <div class="card-body" style="direction: rtl;">
-                  <h5 class="card-title " style="text-align: center;font-size: 20;"> مكرونه</h5>
+                  <h5 class="card-title " style="text-align: center;font-size: 20;"> {{food.foodName}}</h5>
                   <p class="card-text" style="font-size: 13px; padding: auto;  ">يضاف معها كرات فراخ او كرات لحمه</p>
-                  <p class="card-text" style="font-size: 13px; padding: auto; text-align: center; "> السعر: 300 ج</p>
-                  <p class="card-text" style="font-size: 13px; padding: auto; text-align: center; ">الطباخ: محمد محروس</p>
+                  <p class="card-text" style="font-size: 13px; padding: auto; text-align: center; "> السعر: {{food.bigPrice}} ج</p>
+                  <p class="card-text" style="font-size: 13px; padding: auto; text-align: center; ">{{food.cookerName.toString().split("@")[0]}}</p>
                   
-                  <a href="#" class="btn btn-danger"  style="text-align: center;  margin-right: 70px;">مسح الأكلة </a>
+                  <a  class="btn btn-danger"  style="text-align: center;  margin-right: 70px;" (click)="removefoods(food.foodId)">مسح الأكلة </a>
                 </div>
               </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 mb-3" style="max-width: 300px;  max-height: 500px;">
-            <div class="card" >
-                <img class="card-img-top" src="../../assets/photo_2023-02-14_19-47-18.jpg" alt="Card image cap">
-                <div class="card-body"  style="direction: rtl;">
-                    <h5 class="card-title " style="text-align: center;font-size: 20;"> برجر بيتي</h5>
-                    <p class="card-text" style="font-size: 13px; padding: auto;  ">     برجر بيتي يستاهلك  </p>
-                    <p class="card-text" style="font-size: 13px; padding: auto; text-align: center; "> السعر: 300 ج</p>
-                    <p class="card-text" style="font-size: 13px; padding: auto; text-align: center; ">الطباخ: محمد محروس</p>
-                    
-                    <a href="#" class="btn btn-danger"  style="text-align: center; margin-right: 70px;">مسح الأكلة </a>
-                </div>
-              </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 mb-3" style="max-width: 300px;  max-height: 500px;">
-            <div class="card"  style="direction: rtl;">
-                <img class="card-img-top" src="../../assets/photo_2023-02-14_19-47-11.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title " style="text-align: center;font-size: 20;"> بيتزا</h5>
-                    <p class="card-text" style="font-size: 13px; padding: auto;  ">بيتزا محشيه الاطراف بالفراخ او بالجبنه </p>
-                    <p class="card-text" style="font-size: 13px; padding: auto; text-align: center; "> السعر: 300 ج</p>
-                    <p class="card-text" style="font-size: 13px; padding: auto; text-align: center; ">الطباخ: محمد محروس</p>
-                    <a href="#" class="btn btn-danger"  style="text-align: center; margin-right: 70px;">مسح الأكلة </a>
-                </div>
-              </div>
-        </div>
+        
+
     </div>
 </div>

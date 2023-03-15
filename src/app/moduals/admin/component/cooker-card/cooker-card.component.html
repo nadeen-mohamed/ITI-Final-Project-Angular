@@ -1,51 +1,30 @@
 <h1> 👩‍🍳 الطباخين</h1>
 <div class="container">
+
+
   <div class="row">
-    <div class="col-5">
+    <div class="col-5" *ngFor="let cooker of mycookers">
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
-
           <div class="col-md-8">
             <div class="card-body " style="direction: rtl;">
-              <h4 class="card-title "> محمد احمد</h4>
-              <p class="card-text">  اقدم اشهي الاكلات فمختلف الانواع مشويات ومحاشي وحلويات بجوده المطاعم  </p>
-              <p>مواعيد العمل : 9 صباحا الي 8 مساء</p>
-              <p>رقم التليفون: 01006582072</p>
-
+              <h4 class="card-title ">{{cooker.fullName}}</h4> 
+              <p class="card-text"> {{cooker.detailscooker}}  </p>
+              <p>مواعيد العمل : {{cooker.pmcooker}} صباحا الي {{cooker.amcooker}} مساء</p>
+              <p>رقم التليفون: {{cooker.phone}}</p>
               <div style="display: flex; justify-content: space-between;">
-                <p class="card-text"  style="margin-top: 10px;" ><small class="text-muted">المنيا - ملوي</small> </p>
-                <i class="fa-solid fa-trash" style="color:red;margin-top: 10px;"></i>
+              <p class="card-text"  style="margin-top: 10px;" >  <small class="text-muted">{{cooker.address}}</small>  <br/><small class="text-muted">{{cooker.country}}</small> </p>
+              <i class="fa-solid fa-trash" style="color:red;margin-top: 10px;" (click)="removeCooker(cooker)"></i>
                </div>
             </div>
           </div>
           <div class="col-md-4">
-            <img src="../../assets/team2.jpg" class="img-fluid rounded-start" alt="...">
+            <img src={{cooker.photo}} class="img-fluid rounded-start" alt="...">
           </div>
         </div>
       </div>
     </div>
-    <div class="col-5">
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-
-          <div class="col-md-8">
-            <div class="card-body " style="direction: rtl;">
-              <h4 class="card-title ">  احمد علي</h4>
-              <p class="card-text">  اقدم اشهي الاكلات فمختلف الانواع مشويات ومحاشي وحلويات بجوده المطاعم  </p>
-              <p>مواعيد العمل : 9 صباحا الي 8 مساء</p>
-              <p>رقم التليفون: 01006582072</p>
-
-             <div style="display: flex; justify-content: space-between;">
-              <p class="card-text"  style="margin-top: 10px;" ><small class="text-muted">المنيا - ملوي</small> </p>
-              <i class="fa-solid fa-trash" style="color:red;margin-top: 10px;"></i>
-             </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <img src="../../assets/team3.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
-        </div>
-      </div>
+    
 
 
     </div>
@@ -56,7 +35,5 @@
 
 
 
-  </div>
 </div>
-
 
