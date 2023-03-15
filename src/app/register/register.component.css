@@ -1,0 +1,71 @@
+h3{
+    color: rgb(155, 193, 155);
+}
+*{
+    font-family: var(--font-family-rebrand);
+}
+
+.navbar-expand-lg{
+    position: fixed;
+}
+.logo{
+    width:5rem;
+}
+#basic-addon1{
+    background-color: white;
+    
+}
+#bt{
+    background-color: green;
+    color: white;
+    border-radius:25px;
+}
+.btn-separator {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid green;
+    line-height: .1em;
+    font-weight: 300;
+}
+.mb-30, .my-30 {
+    margin-bottom: 30px!important;
+}
+.mt-30, .my-30 {
+    margin-top: 30px!important;
+}
+.btn-separator span {
+    padding: 0 10px;
+    background: #fff;
+   
+    font-weight: bold;
+}
+
+#sign{
+    margin-top: 50px;
+    background-color: grren;
+}
+
+.btn{
+    color: white;
+    border: 1px solid green;
+    background-color:green ;
+    
+}
+.btn:hover{
+    color: white;
+    background-color: rgb(155, 193, 155);
+}
+input {
+    outline-color: rgb(155, 193, 155) ; 
+    border: 1px solid green;
+     direction: rtl;
+     text-align: right;
+     
+    
+  }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:black;
+    opacity: 1; /* Firefox */
+  }
+
+ 
