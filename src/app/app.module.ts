@@ -7,14 +7,21 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CookerCardComponent } from './cooker-card/cooker-card.component';
+import { UserCardComponent } from './user-card/user-card.component';
 import { FoodcardComponent } from './foodcard/foodcard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-  
+
     LoginComponent,
+    NavbarComponent,
+    RegisterComponent,
+    CookerCardComponent,
+    UserCardComponent,
+
        NavbarComponent,
        RegisterComponent,
        FoodcardComponent,
