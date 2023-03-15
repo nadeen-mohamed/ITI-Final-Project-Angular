@@ -10,11 +10,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CookerCardComponent } from './cooker-card/cooker-card.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { FoodcardComponent } from './foodcard/foodcard.component';
-
-
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import {environment} from '../enviroments/environment'
+import { OrdersCardComponent } from './orders-card/orders-card.component';
  
 @NgModule({
   declarations: [
@@ -24,11 +23,10 @@ import {environment} from '../enviroments/environment'
     RegisterComponent,
     CookerCardComponent,
     UserCardComponent,
-
-       NavbarComponent,
-       RegisterComponent,
-       FoodcardComponent,
-     
+    NavbarComponent,
+    RegisterComponent,
+    FoodcardComponent,
+    OrdersCardComponent
   ],
   imports: [
     BrowserModule,

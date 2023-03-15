@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { UserCardComponent } from './user-card/user-card.component';
 
 import { FoodcardComponent } from './foodcard/foodcard.component';
+import { OrdersCardComponent } from './orders-card/orders-card.component';
 const routes: Routes = [
   {
       path: 'Navbar',
@@ -38,6 +39,10 @@ const routes: Routes = [
     path: 'Foodcard',
     component:FoodcardComponent,
   },
+{
+   path: 'OrderCard',
+  component:OrdersCardComponent,
+},
 ];
 
 @NgModule({
