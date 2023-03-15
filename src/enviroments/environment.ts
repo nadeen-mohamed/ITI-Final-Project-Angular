@@ -8,3 +8,6 @@ export const environment={
         appId: "1:888002134030:web:30943c22093a4d9cda3c5f"
       }
 }
+
+
+// getauth()
