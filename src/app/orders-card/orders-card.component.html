@@ -1,7 +1,7 @@
-<h1> 👥 العملاء</h1>
+<p>orders-card works!</p>
 <div class="container">
   <div class="row">
-    <div class="col-5" *ngFor="let user of myUsers">
+    <div class="col-5" *ngFor="let user of userOrder">
       <div class="card mb-3" style="max-width: 480px; ">
         <div class="row g-0">
 
@@ -13,7 +13,7 @@
               <p>رقم التليفون: {{user.phone}}</p>
 
               <!-- <p class="card-text"  style="margin-top: 10px;" ><small class="text-muted">المنيا - ملوي</small></p> -->
-              <i class="fa-solid fa-trash" style="color:red;" (click)="removeUser(user)"></i>
+              <!-- <i class="fa-solid fa-trash" style="color:red;" (click)="removeUser(user)"></i> -->
 
             </div>
           </div>
@@ -23,16 +23,3 @@
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-  </div>
-</div>
-
-
-
