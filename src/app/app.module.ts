@@ -9,12 +9,13 @@ import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CookerCardComponent } from './cooker-card/cooker-card.component';
 import { UserCardComponent } from './user-card/user-card.component';
-
-
+import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import {environment} from '../enviroments/environment'
+ 
 @NgModule({
   declarations: [
     AppComponent,
-
     LoginComponent,
     NavbarComponent,
     RegisterComponent,
@@ -26,6 +27,8 @@ import { UserCardComponent } from './user-card/user-card.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(  environment.firebaseConfig )),
+    provideFirestore(() => getFirestore()),
 
     FormsModule,
   ],
