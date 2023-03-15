@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FoodcardComponent } from './foodcard/foodcard.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
        NavbarComponent,
        RegisterComponent,
+       FoodcardComponent,
      
   ],
   imports: [
