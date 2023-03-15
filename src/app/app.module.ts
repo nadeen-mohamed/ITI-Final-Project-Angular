@@ -9,6 +9,9 @@ import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CookerCardComponent } from './cooker-card/cooker-card.component';
 import { UserCardComponent } from './user-card/user-card.component';
+import { FoodcardComponent } from './foodcard/foodcard.component';
+
+
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import {environment} from '../enviroments/environment'
@@ -22,6 +25,10 @@ import {environment} from '../enviroments/environment'
     CookerCardComponent,
     UserCardComponent,
 
+       NavbarComponent,
+       RegisterComponent,
+       FoodcardComponent,
+     
   ],
   imports: [
     BrowserModule,
