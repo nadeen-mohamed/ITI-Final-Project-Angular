@@ -9,7 +9,7 @@
                   <h5 class="card-title " style="text-align: center;font-size: 20;"> {{food.foodName}}</h5>
                   <p class="card-text" style="font-size: 13px; padding: auto;  ">يضاف معها كرات فراخ او كرات لحمه</p>
                   <p class="card-text" style="font-size: 13px; padding: auto; text-align: center; "> السعر: {{food.bigPrice}} ج</p>
-                  <p class="card-text" style="font-size: 13px; padding: auto; text-align: center; ">{{food.cookerName}}</p>
+                  <p class="card-text" style="font-size: 13px; padding: auto; text-align: center; ">{{food.cookerName.toString().split("@")[0]}}</p>
                   
                   <a  class="btn btn-danger"  style="text-align: center;  margin-right: 70px;" (click)="removefoods(food.foodId)">مسح الأكلة </a>
                 </div>

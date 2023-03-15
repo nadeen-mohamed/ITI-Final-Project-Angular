@@ -21,11 +21,13 @@ export class OrdersCardComponent {
 
 
   ngOnInit(){ // useEffect
-  this.getOrdersData().subscribe((res:Note[])=>{
-   this.myOrder=res  // array of data
-   console.log(res)
-   console.log(res[0].userid)
-   console.log(res.length)
+  this.getOrdersData().subscribe((res)=>{
+  
+  this.myOrder=res
+ // array of data
+   console.log(this.myOrder)
+  //  console.log(res[0].userid)
+  //  console.log(res.length)
   //  this.getUsersData().subscribe((user:Note[])=>{
 
   //  });
@@ -74,8 +76,10 @@ export class OrdersCardComponent {
   }
 
 
-  // removeUser(cooker:Note){
-  //   let x2= doc(this.fs,'users',`${cooker.userid}`) //(db,'cookers',id)
+  // removeOrder(order:Note){
+  //   // console.log(order.userOrderId);
+    
+  //   let x2= doc(this.fs,'orders',`${order.userOrderId}`) //(db,'cookers',id)
   //   return deleteDoc(x2)
   // }
 
