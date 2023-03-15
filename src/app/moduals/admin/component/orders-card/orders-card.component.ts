@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { collectionData, deleteDoc, Firestore, getDoc, onSnapshot } from '@angular/fire/firestore';
 import { collection, doc } from '@firebase/firestore';
 import { from, Observable } from 'rxjs';
-import { Note } from '../note';
+import { Note } from '../../../../note';
 
 
 @Component({

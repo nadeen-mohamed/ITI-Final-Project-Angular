@@ -1,17 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CookerCardComponent } from './cooker-card/cooker-card.component';
+import { CookerCardComponent } from './moduals/admin/component/cooker-card/cooker-card.component';
 import { LoginComponent } from './login/login.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { RegisterComponent } from './register/register.component';
-import { UserCardComponent } from './user-card/user-card.component';
 
-import { FoodcardComponent } from './foodcard/foodcard.component';
-import { OrdersCardComponent } from './orders-card/orders-card.component';
+ import { RegisterComponent } from './register/register.component';
+ //import { UserCardComponent } from './user-card/user-card.component';
+
+//import { FoodcardComponent } from './foodcard/foodcard.component';
+import { AuthGuard } from './guards/auth.guard';
+//import { FoodcardComponent } from './foodcard/foodcard.component';
+import { OrdersCardComponent } from './moduals/admin/component/orders-card/orders-card.component';
+import { NavbarComponent } from './moduals/admin/component/navbar/navbar.component';
+import { UserCardComponent } from './moduals/admin/component/user-card/user-card.component';
+import { FoodcardComponent } from './moduals/admin/component/foodcard/foodcard.component';
 const routes: Routes = [
   {
-      path: 'Navbar',
-       component:NavbarComponent,
+      path: 'admin',
+      canActivate:[AuthGuard],
+      loadChildren: () =>
+      import('./moduals/admin/admin.module').then((m) => m.AdminModule),
    },
 
   {

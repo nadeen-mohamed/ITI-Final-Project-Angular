@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { collectionData, deleteDoc, Firestore, onSnapshot } from '@angular/fire/firestore';
 import { collection, doc } from '@firebase/firestore';
 import { Observable } from 'rxjs';
-import { Note } from '../note';
+import { Note } from '../../../../note';
 
 @Component({
   selector: 'app-cooker-card',
@@ -46,12 +46,12 @@ export class CookerCardComponent {
 
 
 // 1- npm firbase
-// 2- firebase.js => configartion / firbase.ts 
+// 2- firebase.js => configartion / firbase.ts
 // 3 - provierfirabseapp(intialize(firabse.config)) // ربط بين مشرووعي والاانجوالار
 // 4 - firstore => firsbase= getfirstore() / providerfirstor ( firstore())
 
-// firstor 
-// cooker.ts =>  constructor(fs:Firstore){} =>  
+// firstor
+// cooker.ts =>  constructor(fs:Firstore){} =>
 
 
 
