@@ -6,17 +6,15 @@
     <div class="col-5" *ngFor="let cooker of mycookers">
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
-
           <div class="col-md-8">
             <div class="card-body " style="direction: rtl;">
-              <h4 class="card-title ">{{cooker.fullName}}</h4>
+              <h4 class="card-title ">{{cooker.fullName}}</h4> 
               <p class="card-text"> {{cooker.detailscooker}}  </p>
               <p>مواعيد العمل : {{cooker.pmcooker}} صباحا الي {{cooker.amcooker}} مساء</p>
               <p>رقم التليفون: {{cooker.phone}}</p>
-
               <div style="display: flex; justify-content: space-between;">
-                <p class="card-text"  style="margin-top: 10px;" >  <small class="text-muted">{{cooker.address}}</small>  <br/><small class="text-muted">{{cooker.country}}</small> </p>
-                <i class="fa-solid fa-trash" style="color:red;margin-top: 10px;" (click)="removeCooker(cooker)"></i>
+              <p class="card-text"  style="margin-top: 10px;" >  <small class="text-muted">{{cooker.address}}</small>  <br/><small class="text-muted">{{cooker.country}}</small> </p>
+              <i class="fa-solid fa-trash" style="color:red;margin-top: 10px;" (click)="removeCooker(cooker)"></i>
                </div>
             </div>
           </div>
@@ -38,5 +36,4 @@
 
 
 </div>
-
 

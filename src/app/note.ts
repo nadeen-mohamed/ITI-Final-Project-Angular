@@ -1,5 +1,7 @@
 export interface Note{
 
     userid:string,
-    cookerName:string
+    cookerName:string,
+    orders:[],
+    userOrderId:any
 }
