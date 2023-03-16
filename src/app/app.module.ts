@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 
-import { RegisterComponent } from './register/register.component';
+// import { RegisterComponent } from './register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CookerCardComponent } from './moduals/admin/component/cooker-card/cooker-card.component';
 import { UserCardComponent } from './moduals/admin/component/user-card/user-card.component';
@@ -16,20 +16,22 @@ import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import {environment} from '../enviroments/environment';
 import { OrdersCardComponent } from './moduals/admin/component/orders-card/orders-card.component'
+// import { NavbarComponent } from './moduals/admin/component/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
 
-    RegisterComponent,
+    // RegisterComponent,
     // CookerCardComponent,
     UserCardComponent,
 
 
-       RegisterComponent,
+      //  RegisterComponent,
        FoodcardComponent,
        OrdersCardComponent,
+      //  NavbarComponent
 
   ],
   imports: [

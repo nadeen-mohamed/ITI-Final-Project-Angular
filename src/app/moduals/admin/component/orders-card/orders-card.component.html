@@ -1,24 +1,26 @@
-<p>orders-card works!</p>
 <div class="container">
-  <div class="row">
-    <div class="col-5" *ngFor="let user of userOrder">
+  <div class="row"*ngFor="let order of myOrder">
+    <div class="col-5" *ngFor="let ody of order.orders" >
       <div class="card mb-3" style="max-width: 480px; ">
         <div class="row g-0">
 
           <div class="col-md-8">
             <div class="card-body " style="direction: rtl;">
-              <h4 class="card-title "> {{user.fullName}} </h4>
-              <p class="card-text">  </p>
-              <p>{{user.address}}</p>
-              <p>رقم التليفون: {{user.phone}}</p>
+              <h4 class="card-title "> {{ody.foodName}} </h4>
+              <p class="card-text">طلب من {{ody.userOrderName.toString().split("@")[0]}}  </p>
+              <p class="card-text">اسم الطباخ {{ody.cookerName}}  </p>
+              <p class="card-text">الحجم   {{ody.choosenPrice}}  </p>
+              <p class="card-text"> الكميه {{ody.quantity}}  </p>
+              <!-- <p>{{ody.address}}</p> -->
+              <!-- <p>رقم التليفون: {{ody.phone}}</p> -->
 
-              <!-- <p class="card-text"  style="margin-top: 10px;" ><small class="text-muted">المنيا - ملوي</small></p> -->
-              <!-- <i class="fa-solid fa-trash" style="color:red;" (click)="removeUser(user)"></i> -->
+              <!-- <p class="card-text"  style="margin-top: 10px;" ><small class="text-muted"> التاريخ {{ody.ش}</small></p> -->
+              <!-- <i class="fa-solid fa-trash" style="color:red;" (click)="removeOrder(ody)"></i>  -->
 
             </div>
           </div>
           <div class="col-md-4">
-            <img src={{user.photo}} class="img-fluid rounded-start"  alt="...">
+            <img src={{ody.foodImg}} class="img-fluid rounded-start"  alt="...">
           </div>
         </div>
       </div>
