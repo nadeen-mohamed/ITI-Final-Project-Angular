@@ -1,48 +1,43 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CookerCardComponent } from './cooker-card/cooker-card.component';
+import { CookerCardComponent } from './moduals/admin/component/cooker-card/cooker-card.component';
 import { LoginComponent } from './login/login.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { RegisterComponent } from './register/register.component';
-import { UserCardComponent } from './user-card/user-card.component';
 
-import { FoodcardComponent } from './foodcard/foodcard.component';
-import { OrdersCardComponent } from './orders-card/orders-card.component';
+// import { RegisterComponent } from './register/register.component';
+// import { UserCardComponent } from './user-card/user-card.component';
+
+// import { FoodcardComponent } from './foodcard/foodcard.component';
+import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
   {
-      path: 'Navbar',
-       component:NavbarComponent,
+      path: 'admin',
+      canActivate:[AuthGuard],
+      loadChildren: () =>
+      import('./moduals/admin/admin.module').then((m) => m.AdminModule),
    },
 
   {
     path: 'login',
     component:LoginComponent,
   },
-  {
-    path: 'Register',
-    component:RegisterComponent,
-  },
-  {
-    path: 'CookerCard',
-    component:CookerCardComponent,
-  },
-  {
-    path: 'UserCard',
-    component:UserCardComponent,
-  },
+  // {
+  //   path: 'Register',
+  //   component:RegisterComponent,
+  // },
+  // {
+  //   path: 'CookerCard',
+  //   component:CookerCardComponent,
+  // },
+  // {
+  //   path: 'UserCard',
+  //   component:UserCardComponent,
+  // },
 
-   {
-    path: 'Navbar',
-    component:NavbarComponent,
-  },
-  {
-    path: 'Foodcard',
-    component:FoodcardComponent,
-  },
-{
-   path: 'OrderCard',
-  component:OrdersCardComponent,
-},
+ 
+  // {
+  //   path: 'Foodcard',
+  //   component:FoodcardComponent,
+  // },
 ];
 
 @NgModule({

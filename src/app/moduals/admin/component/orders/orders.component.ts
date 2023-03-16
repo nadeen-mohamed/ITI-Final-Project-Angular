@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
+
 import { collectionData, deleteDoc, Firestore, getDoc, onSnapshot } from '@angular/fire/firestore';
 import { collection, doc } from '@firebase/firestore';
 import { from, Observable } from 'rxjs';
-import { Note } from '../note'
-
+import { Note } from 'src/app/note';
 
 @Component({
-  selector: 'app-orders-card',
-  templateUrl: './orders-card.component.html',
-  styleUrls: ['./orders-card.component.css']
+  selector: 'app-orders',
+  templateUrl: './orders.component.html',
+  styleUrls: ['./orders.component.css']
 })
-export class OrdersCardComponent {
+export class OrdersComponent {
 
   myOrder:any=[] // array of all cookers
   userOrder:any=[]
@@ -82,6 +82,4 @@ export class OrdersCardComponent {
   //   let x2= doc(this.fs,'orders',`${order.userOrderId}`) //(db,'cookers',id)
   //   return deleteDoc(x2)
   // }
-
-
 }

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { collectionData, deleteDoc, Firestore, onSnapshot } from '@angular/fire/firestore';
 import { collection, doc } from '@firebase/firestore';
 import { Observable } from 'rxjs';
-import { Note } from '../note';
+import { Note } from 'src/app/note';
 
 @Component({
   selector: 'app-cooker-card',
@@ -52,7 +52,6 @@ export class CookerCardComponent {
 
 // firstor 
 // cooker.ts =>  constructor(fs:Firstore){} =>  
-
 
 
 

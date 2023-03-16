@@ -4,29 +4,30 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { RegisterComponent } from './register/register.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { CookerCardComponent } from './cooker-card/cooker-card.component';
-import { UserCardComponent } from './user-card/user-card.component';
-import { FoodcardComponent } from './foodcard/foodcard.component';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import {environment} from '../enviroments/environment'
-import { OrdersCardComponent } from './orders-card/orders-card.component';
- 
+import { RegisterComponent } from './register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { UserCardComponent } from './moduals/admin/component/user-card/user-card.component';
+import { FoodcardComponent } from './moduals/admin/component/foodcard/foodcard.component';
+import { environment } from 'src/enviroments/environment';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    NavbarComponent,
+ 
     RegisterComponent,
-    CookerCardComponent,
+   
     UserCardComponent,
-    NavbarComponent,
-    RegisterComponent,
-    FoodcardComponent,
-    OrdersCardComponent
+
+     
+       RegisterComponent,
+       FoodcardComponent,
+  
+     
   ],
   imports: [
     BrowserModule,
@@ -36,6 +37,8 @@ import { OrdersCardComponent } from './orders-card/orders-card.component';
     provideFirestore(() => getFirestore()),
 
     FormsModule,
+    provideFirebaseApp(() => initializeApp(  environment.firebaseConfig )),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent]
