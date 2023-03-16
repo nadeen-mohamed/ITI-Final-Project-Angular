@@ -6,14 +6,18 @@
   
             <div class="col-md-8">
               <div class="card-body " style="direction: rtl;">
-                <h4 class="card-title "> {{ody.foodName}} </h4>
-                <p class="card-text">طلب من {{ody.userOrderName.toString().split("@")[0]}}  </p>
-                <p class="card-text">اسم الطباخ {{ody.cookerName}}  </p>
+                <h4 class="card-title ">  {{ody.foodName}} </h4>
+                <p class="card-text">طلب من  {{ody.userOrderName.toString().split("@")[0]}}  </p>
+                <p class="card-text">اسم الطباخ  {{ody.cookerName.toString().split("@")[0]}} </p>
                 <p class="card-text">الحجم   {{ody.choosenPrice}}  </p>
-                <p class="card-text"> الكميه {{ody.quantity}}  </p>
+                <p class="card-text">سعر القطعه  {{ody.choosenPrice=='كبير'?ody.bigPrice*ody.quantity:ody.choosenPrice=='وسط'?ody.middlePrice*ody.quantity:ody.smallPrice*ody.quantity}}   </p>
+                <div style="display:flex">
+                  <p class="card-text ms-3" > الكميه {{ody.quantity}}  </p>
+                  <p class="card-text" style="display: inline-block;"> السعر الاجمالي  {{ody.choosenPrice=='كبير'?ody.bigPrice*ody.quantity:ody.choosenPrice=='وسط'?ody.middlePrice*ody.quantity:ody.smallPrice*ody.quantity}}  </p>
+                </div>
                 <!-- <p>{{ody.address}}</p> -->
                 <!-- <p>رقم التليفون: {{ody.phone}}</p> -->
-  
+  <!-- كبير  -->
                 <!-- <p class="card-text"  style="margin-top: 10px;" ><small class="text-muted"> التاريخ {{ody.ش}</small></p> -->
                 <!-- <i class="fa-solid fa-trash" style="color:red;" (click)="removeOrder(ody)"></i>  -->
   

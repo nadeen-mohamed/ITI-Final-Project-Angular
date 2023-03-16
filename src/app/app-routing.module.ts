@@ -20,24 +20,7 @@ const routes: Routes = [
     path: 'login',
     component:LoginComponent,
   },
-  // {
-  //   path: 'Register',
-  //   component:RegisterComponent,
-  // },
-  // {
-  //   path: 'CookerCard',
-  //   component:CookerCardComponent,
-  // },
-  // {
-  //   path: 'UserCard',
-  //   component:UserCardComponent,
-  // },
 
- 
-  // {
-  //   path: 'Foodcard',
-  //   component:FoodcardComponent,
-  // },
 ];
 
 @NgModule({

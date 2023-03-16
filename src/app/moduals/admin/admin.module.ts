@@ -7,14 +7,17 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import { UserCardComponent } from './component/user-card/user-card.component';
 import { CookerCardComponent } from './component/cooker-card/cooker-card.component';
 import { OrdersComponent } from './component/orders/orders.component';
+import { FoodcardComponent } from './component/foodcard/foodcard.component';
 
 
 @NgModule({
   declarations: [
     AdminDashboardComponent,
     NavbarComponent,
+    UserCardComponent,
     CookerCardComponent,
-    OrdersComponent
+    OrdersComponent,
+    FoodcardComponent
   ],
   imports: [
     CommonModule,

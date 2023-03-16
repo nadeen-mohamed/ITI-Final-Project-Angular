@@ -1,8 +1,7 @@
 <h1>🥗 الأكلات</h1>
 <div class="container">
     <div class="row">
-
-        <div class="col-lg-4 col-md-6 col-sm-6 mb-3" *ngFor="let food of myfoods " style="max-width: 400px; max-height: 500px;">
+        <div class="col-lg-6 col-md-5 col-sm-6 mb-3" *ngFor="let food of myfoods " style="max-width: 290px; max-height: 500px;">
             <div class="card" >
                 <img class="card-img-top" src={{food.foodImg}} alt="Card image cap">
                 <div class="card-body" style="direction: rtl;">
@@ -10,10 +9,11 @@
                   <p class="card-text" style="font-size: 13px; padding: auto;  ">يضاف معها كرات فراخ او كرات لحمه</p>
                   <p class="card-text" style="font-size: 13px; padding: auto; text-align: center; "> السعر: {{food.bigPrice}} ج</p>
                   <p class="card-text" style="font-size: 13px; padding: auto; text-align: center; ">{{food.cookerName.toString().split("@")[0]}}</p>
-                  
                   <a  class="btn btn-danger"  style="text-align: center;  margin-right: 70px;" (click)="removefoods(food.foodId)">مسح الأكلة </a>
                 </div>
               </div>
+        <div class="col-lg-3 col-md-3 col-sm-5 mb-3" *ngFor="let food of myfoods " style="max-width: 300px; max-height: 500px;">
+</div>>
         </div>
         
 
